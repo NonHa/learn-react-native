@@ -17,6 +17,7 @@ import {
   Text,
   IconFA,
   LogBox,
+  Platform,
 } from 'react-native';
 // import './rn-polyfill-depriated-proptypes';
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,9 +25,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import Swiper from 'react-native-swiper';
-import Index from './src/index.js';
+import Index from './src/day1.js';
 import Day2 from './src/day2';
 import Day3 from './src/day3';
+import Day5 from './src/day5';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
@@ -63,6 +65,16 @@ const NavagationMain = function ({ navigation }) {
       color: '#90bdc1',
       hideNav: true,
     },
+    {
+      key: 5,
+      title: 'find my location',
+      component: 'Day5',
+      isFA: false,
+      icon: 'location',
+      size: 60,
+      color: '#90bdc1',
+      hideNav: true,
+    },
   ];
   const boxs = data.map(function (elem, index) {
     return (
@@ -72,7 +84,7 @@ const NavagationMain = function ({ navigation }) {
         underlayColor="#eee"
         onPress={() => navigation.navigate(elem.component)}>
         <View style={styles.boxContainer}>
-          <Text style={styles.boxText}>Day{index + 1}</Text>
+          <Text style={styles.boxText}>{elem.component}</Text>
           {elem.isFA ? (
             <IconFA
               size={elem.size}
@@ -138,6 +150,7 @@ const App = () => {
         <Stack.Screen name="Day1" component={Index} options={{ title: 'day1' }} />
         <Stack.Screen name="Day2" component={Day2} options={{ headerShown: false }} />
         <Stack.Screen name="Day3" component={Day3} options={{ headerShown: false }} />
+        <Stack.Screen name="Day5" component={Day5} />
       </Stack.Navigator>
     </NavigationContainer>
   );
