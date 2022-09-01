@@ -15,7 +15,6 @@ import {
   TouchableHighlight,
   Image,
   Text,
-  IconFA,
   LogBox,
   Platform,
 } from 'react-native';
@@ -23,68 +22,140 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
+import IconFA from 'react-native-vector-icons/FontAwesome';
 
 import Swiper from 'react-native-swiper';
 import Index from './src/day1.js';
 import Day2 from './src/day2';
 import Day3 from './src/day3';
 import Day5 from './src/day5';
+import Day6 from './src/day6';
+import Day7 from './src/day7';
+import Day8 from './src/day8';
+import Day9 from './src/day9';
+import Day10 from './src/day10';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
+const data = [
+  {
+    key: 0,
+    title: 'A stopwatch',
+    name: 'Day1',
+    component: Index,
+    isFA: false,
+    icon: 'ios-stopwatch',
+    size: 48,
+    color: '#ff856c',
+    hideNav: false,
+  },
+  {
+    key: 1,
+    title: 'A weather app',
+    name: 'Day2',
+    component: Day2,
 
+    isFA: false,
+    icon: 'partly-sunny',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 2,
+    title: 'twitter',
+    component: Day3,
+    name: 'Day3',
+
+    isFA: false,
+    icon: 'logo-twitter',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 5,
+    title: 'find my location',
+    name: 'Day5',
+    component: Day5,
+
+    isFA: false,
+    icon: 'location',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 6,
+    title: 'find my location',
+    name: 'Day6',
+    component: Day6,
+
+    isFA: true,
+    icon: 'spotify',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 7,
+    title: 'find my location',
+    name: 'Day7',
+    component: Day7,
+
+    isFA: false,
+    icon: 'ios-baseball',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 8,
+    title: 'find my location',
+    name: 'Day8',
+    component: Day8,
+
+    isFA: true,
+    icon: 'google',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 9,
+    title: 'find my location',
+    name: 'Day9',
+    component: Day9,
+
+    isFA: false,
+    icon: 'logo-tumblr',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 10,
+    title: 'find my location',
+    name: 'Day10',
+    component: Day10,
+
+    isFA: false,
+    icon: 'md-contrast',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+];
 const NavagationMain = function ({ navigation }) {
-  const data = [
-    {
-      key: 0,
-      title: 'A stopwatch',
-      component: 'Day1',
-      isFA: false,
-      icon: 'ios-stopwatch',
-      size: 48,
-      color: '#ff856c',
-      hideNav: false,
-    },
-    {
-      key: 1,
-      title: 'A weather app',
-      component: 'Day2',
-      isFA: false,
-      icon: 'partly-sunny',
-      size: 60,
-      color: '#90bdc1',
-      hideNav: true,
-    },
-    {
-      key: 2,
-      title: 'twitter',
-      component: 'Day3',
-      isFA: false,
-      icon: 'logo-twitter',
-      size: 60,
-      color: '#90bdc1',
-      hideNav: true,
-    },
-    {
-      key: 5,
-      title: 'find my location',
-      component: 'Day5',
-      isFA: false,
-      icon: 'location',
-      size: 60,
-      color: '#90bdc1',
-      hideNav: true,
-    },
-  ];
   const boxs = data.map(function (elem, index) {
     return (
       <TouchableHighlight
         key={elem.key}
         style={[styles.touchBox, index % 3 === 2 ? styles.touchBox2 : styles.touchBox1]}
         underlayColor="#eee"
-        onPress={() => navigation.navigate(elem.component)}>
+        onPress={() => navigation.navigate(elem.name)}>
         <View style={styles.boxContainer}>
-          <Text style={styles.boxText}>{elem.component}</Text>
+          <Text style={styles.boxText}>{elem.name}</Text>
           {elem.isFA ? (
             <IconFA
               size={elem.size}
@@ -147,10 +218,16 @@ const App = () => {
         <Stack.Screen name="NavagationMain" options={{ title: 'NavagationMain' }}>
           {(props) => <NavagationMain {...props} />}
         </Stack.Screen>
-        <Stack.Screen name="Day1" component={Index} options={{ title: 'day1' }} />
-        <Stack.Screen name="Day2" component={Day2} options={{ headerShown: false }} />
-        <Stack.Screen name="Day3" component={Day3} options={{ headerShown: false }} />
-        <Stack.Screen name="Day5" component={Day5} />
+        {data.map(function (v) {
+          return (
+            <Stack.Screen
+              key={v.key}
+              name={v.name}
+              component={v.component}
+              options={{ headerShown: !v.hideNav }}
+            />
+          );
+        })}
       </Stack.Navigator>
     </NavigationContainer>
   );
