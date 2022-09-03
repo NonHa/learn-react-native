@@ -3095,6 +3095,11 @@
   "resolved" "https://registry.npmmirror.com/cjs-module-lexer/-/cjs-module-lexer-0.6.0.tgz"
   "version" "0.6.0"
 
+"clamp@^1.0.1":
+  "integrity" "sha512-kgMuFyE78OC6Dyu3Dy7vcx4uy97EIbVxJB/B0eJ3bUNAkwdNcxYzgKltnyADiYwsR7SEqkkUPsEUT//OVS6XMA=="
+  "resolved" "https://registry.npmmirror.com/clamp/-/clamp-1.0.1.tgz"
+  "version" "1.0.1"
+
 "class-utils@^0.3.5":
   "integrity" "sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg=="
   "resolved" "https://registry.npmmirror.com/class-utils/-/class-utils-0.3.6.tgz"
@@ -7758,6 +7763,14 @@
     "create-react-class" "^15.6.2"
     "prop-types" "^15.6.0"
     "react-timer-mixin" "^0.13.3"
+
+"react-native-swipe-cards@^0.1.1":
+  "integrity" "sha512-Tonhjil8vyOJRx55rUrQo+BHcUUk5KZQMC9SyQSY7U+kO94voDlKCvoqoPMvqTlpj+OUm4SAHtigyRYXdbehVg=="
+  "resolved" "https://registry.npmmirror.com/react-native-swipe-cards/-/react-native-swipe-cards-0.1.1.tgz"
+  "version" "0.1.1"
+  dependencies:
+    "clamp" "^1.0.1"
+    "prop-types" "^15.6.0"
 
 "react-native-swiper@^1.6.0":
   "integrity" "sha512-OnkTTZi+9uZUgy0uz1I9oYDhCU3z36lZn+LFsk9FXPRelxb/KeABzvPs3r3SrHWy1aA67KGtSFj0xNK2QD0NJQ=="

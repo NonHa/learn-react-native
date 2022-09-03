@@ -15,7 +15,7 @@ import {
   View,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import { CameraRoll } from '@react-native-camera-roll/camera-roll';
+// import { CameraRoll } from '@react-native-camera-roll/camera-roll';
 import Util from './utils';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -39,10 +39,10 @@ class FunctionView extends Component {
     const fetchParams = {
       first: 4,
     };
-    CameraRoll.getPhotos(fetchParams).done(
-      (data) => this.storeImages(data),
-      (err) => this.logImageError(err),
-    );
+    // CameraRoll.getPhotos(fetchParams).done(
+    //   (data) => this.storeImages(data),
+    //   (err) => this.logImageError(err),
+    // );
   }
 
   storeImages(data) {
