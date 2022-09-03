@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-
+import 'webgltexture-loader-expo-camera';
 import {
   View,
   ScrollView,
@@ -34,6 +34,9 @@ import Day7 from './src/day7';
 import Day8 from './src/day8';
 import Day9 from './src/day9';
 import Day10 from './src/day10';
+import Day11 from './src/day11';
+import Day12 from './src/day12';
+import Day13 from './src/day13';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
@@ -141,6 +144,42 @@ const data = [
 
     isFA: false,
     icon: 'md-contrast',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 11,
+    title: 'find my location',
+    name: 'Day11',
+    component: Day11,
+
+    isFA: true,
+    icon: 'columns',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  // {
+  //   key: 12,
+  //   title: 'find my location',
+  //   name: 'Day12',
+  //   component: Day12,
+
+  //   isFA: true,
+  //   icon: 'columns',
+  //   size: 60,
+  //   color: '#90bdc1',
+  //   hideNav: true,
+  // },
+  {
+    key: 13,
+    title: 'find my location',
+    name: 'Day13',
+    component: Day13,
+
+    isFA: true,
+    icon: 'columns',
     size: 60,
     color: '#90bdc1',
     hideNav: true,
