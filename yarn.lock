@@ -1728,11 +1728,6 @@
     "mkdirp" "^1.0.4"
     "rimraf" "^3.0.2"
 
-"@react-native-camera-roll/camera-roll@^5.0.1":
-  "integrity" "sha512-C+6glzmhNLJV2GIZTjmd0zyNUiUVoSZ+iEWWpYTXHjqmuiAgXSfpPPKY5nv95ONLY3wL1N2O3T1vQNzdIa0O6Q=="
-  "resolved" "https://registry.npmmirror.com/@react-native-camera-roll/camera-roll/-/camera-roll-5.0.1.tgz"
-  "version" "5.0.1"
-
 "@react-native-community/cli-clean@^8.0.4":
   "integrity" "sha512-IwS1M1NHg6+qL8PThZYMSIMYbZ6Zbx+lIck9PLBskbosFo24M3lCOflOl++Bggjakp6mR+sRXxLMexid/GeOsQ=="
   "resolved" "https://registry.npmmirror.com/@react-native-community/cli-clean/-/cli-clean-8.0.4.tgz"
@@ -1902,6 +1897,13 @@
     "minimist" "^1.2.0"
     "prompts" "^2.4.0"
     "semver" "^6.3.0"
+
+"@react-native-community/datetimepicker@^6.3.2":
+  "integrity" "sha512-z9LieDDi+u+10uLKZWvpzfgVeCv/05v1CH0059Tx7KlJGQx8DiNwtGJLyUxB+WDalcEb+7xiCFut7vxnWWyIiA=="
+  "resolved" "https://registry.npmmirror.com/@react-native-community/datetimepicker/-/datetimepicker-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "invariant" "^2.2.4"
 
 "@react-native-community/eslint-config@^2.0.0":
   "integrity" "sha512-vHaMMfvMp9BWCQQ0lNIXibOJTcXIbYUQ8dSUsMOsrXgVkeVQJj88OwrKS00rQyqwMaC4/a6HuDiFzYUkGKOpVg=="
@@ -6825,6 +6827,11 @@
   "resolved" "https://registry.npmmirror.com/mkdirp/-/mkdirp-1.0.4.tgz"
   "version" "1.0.4"
 
+"moment@^2.22.0":
+  "integrity" "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
+  "resolved" "https://registry.npmmirror.com/moment/-/moment-2.29.4.tgz"
+  "version" "2.29.4"
+
 "ms@^2.1.1", "ms@2.1.2":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
   "resolved" "https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz"
@@ -7722,6 +7729,13 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
+"react-native-datepicker@^1.7.2":
+  "integrity" "sha512-ses0N1y44fYBmlejYwR2i+dGnQQ8v5/gacX2CrbFJiWxbcQaRuxexsZPB9YQuQkAy+uKz5Gti3Lrp3dh9BfkzA=="
+  "resolved" "https://registry.npmmirror.com/react-native-datepicker/-/react-native-datepicker-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "moment" "^2.22.0"
+
 "react-native-gradle-plugin@^0.0.7":
   "integrity" "sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g=="
   "resolved" "https://registry.npmmirror.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz"
@@ -7787,7 +7801,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>= 0.64.3", "react-native@>=0.20.0", "react-native@>=0.57", "react-native@>=0.59", "react-native@0.69.4":
+"react-native@*", "react-native@>= 0.64.3", "react-native@>=0.20.0", "react-native@>=0.57", "react-native@0.69.4":
   "integrity" "sha512-rqNMialM/T4pHRKWqTIpOxA65B/9kUjtnepxwJqvsdCeMP9Q2YdSx4VASFR9RoEFYcPRU41yGf6EKrChNfns3g=="
   "resolved" "https://registry.npmmirror.com/react-native/-/react-native-0.69.4.tgz"
   "version" "0.69.4"

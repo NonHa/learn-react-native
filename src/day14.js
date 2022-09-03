@@ -24,7 +24,14 @@ import PropTypes from 'prop-types';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import SwipeCards from 'react-native-swipe-cards';
-
+const imgList = [
+  require('./img/minion1.png'),
+  require('./img/minion2.png'),
+  require('./img/minion3.png'),
+  require('./img/minion4.png'),
+  require('./img/minion5.png'),
+];
+const names = ['Stuart', 'Bob', 'Kevin', 'Dave', 'Jerry'];
 class Card extends Component {
   static propTypes = {
     top: PropTypes.number.isRequired,
@@ -40,10 +47,7 @@ class Card extends Component {
           styles.card,
           { top: this.props.top, width: this.props.width, left: this.props.left },
         ]}>
-        <Image
-          style={{ width: this.props.width - 2, height: 350 }}
-          source={{ uri: this.props.img }}
-        />
+        <Image style={{ width: this.props.width - 2, height: 350 }} source={this.props.img} />
         <View style={styles.cardInfo}>
           <View>
             <Text style={styles.cardText}>
@@ -80,10 +84,7 @@ class SCard extends Component {
       <View
         key={this.props.id}
         style={[styles.scard, { top: this.props.top, width: this.props.width }]}>
-        <Image
-          style={{ width: this.props.width - 2, height: 350 }}
-          source={{ uri: this.props.img }}
-        />
+        <Image style={{ width: this.props.width - 2, height: 350 }} source={this.props.img} />
         <View style={styles.cardInfo}>
           <View>
             <Text style={styles.cardText}>
@@ -110,9 +111,10 @@ class SCard extends Component {
 class SwipeCard extends Component {
   constructor() {
     super();
-    const simgs = ['minion1', 'minion2', 'minion3', 'minion4', 'minion5'];
+    const simgs = imgList;
+
     // const simgs = ["https://media.giphy.com/media/GfXFVHUzjlbOg/giphy.gif","https://media.giphy.com/media/irTuv1L1T34TC/giphy.gif","https://media.giphy.com/media/LkLL0HJerdXMI/giphy.gif","https://media.giphy.com/media/fFBmUMzFL5zRS/giphy.gif","https://media.giphy.com/media/oDLDbBgf0dkis/giphy.gif"];
-    const names = ['Stuart', 'Bob', 'Kevin', 'Dave', 'Jerry'];
+
     const cards = simgs.map(function (elem, index) {
       return {
         id: 'sc' + index,
@@ -153,14 +155,13 @@ class SwipeCard extends Component {
 class Cards extends Component {
   constructor() {
     super();
-    const imgs = ['minion1', 'minion2', 'minion3', 'minion4'];
-    const names = ['Stuart', 'Bob', 'Kevin', 'Dave', 'Jerry'];
+    const imgs = imgList.slice(1, imgList.length);
 
     this.state = { imgs, names };
   }
 
   componentDidMount() {
-    StatusBar.setBarStyle(0);
+    StatusBar.setBarStyle('dark-content');
   }
 
   _next() {
@@ -298,6 +299,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     top: 520,
     position: 'absolute',
+    textAlign: 'center',
+    justifyContent: 'space-evenly',
   },
   smallAction: {
     width: Util.size.width === 375 ? 70 : 60,
@@ -319,5 +322,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 5,
+    // flex: 1,
   },
 });

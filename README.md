@@ -35,3 +35,18 @@
 - 底部 tab [@react-navigation/bottom-tabs](https://blog.csdn.net/isKelel/article/details/123142013)
 
 - 动画 Api [Animated](https://www.reactnative.cn/docs/animated)
+
+# Day7
+
+使用 react native api [PanResponder](https://www.reactnative.cn/docs/panresponder)
+PanResponder 类可以将多点触摸操作协调成一个手势。它使得一个单点触摸可以接受更多的触摸操作，也可以用于识别简单的多点触摸手势。
+
+# Day9
+
+# Day10
+
+使用 react native [TouchableWithoutFeedback](https://www.reactnative.cn/docs/touchablewithoutfeedback)
+
+# Day15
+
+时间组件 [React Native DateTimePicker](https://github.com/react-native-datetimepicker/datetimepicker)

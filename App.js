@@ -37,6 +37,8 @@ import Day10 from './src/day10';
 import Day11 from './src/day11';
 import Day12 from './src/day12';
 import Day13 from './src/day13';
+import Day14 from './src/day14';
+import Day15 from './src/day15';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
@@ -177,6 +179,30 @@ const data = [
     title: 'find my location',
     name: 'Day13',
     component: Day13,
+
+    isFA: true,
+    icon: 'columns',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 14,
+    title: 'find my location',
+    name: 'Day14',
+    component: Day14,
+
+    isFA: true,
+    icon: 'columns',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 15,
+    title: 'find my location',
+    name: 'Day15',
+    component: Day15,
 
     isFA: true,
     icon: 'columns',
