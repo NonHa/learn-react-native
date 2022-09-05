@@ -47,6 +47,16 @@ PanResponder 类可以将多点触摸操作协调成一个手势。它使得一�
 
 使用 react native [TouchableWithoutFeedback](https://www.reactnative.cn/docs/touchablewithoutfeedback)
 
+# Day14
+
+轮播图卡片 [react-native-swipe-cards](https://github.com/tarasvakulka/react-native-cards-swipe)
+
 # Day15
 
 时间组件 [React Native DateTimePicker](https://github.com/react-native-datetimepicker/datetimepicker)
+
+# Day16
+
+搜索组件 [React Native Search Bar](https://github.com/umhan35/react-native-search-bar)
+
+模糊查询组件 [fuzzy](https://github.com/mattyork/fuzzy)

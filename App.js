@@ -39,6 +39,8 @@ import Day12 from './src/day12';
 import Day13 from './src/day13';
 import Day14 from './src/day14';
 import Day15 from './src/day15';
+// import Day16 from './src/day16';
+import Day17 from './src/day17';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
@@ -180,8 +182,8 @@ const data = [
     name: 'Day13',
     component: Day13,
 
-    isFA: true,
-    icon: 'columns',
+    isFA: false,
+    icon: 'chatbox',
     size: 60,
     color: '#90bdc1',
     hideNav: true,
@@ -192,8 +194,8 @@ const data = [
     name: 'Day14',
     component: Day14,
 
-    isFA: true,
-    icon: 'columns',
+    isFA: false,
+    icon: 'card',
     size: 60,
     color: '#90bdc1',
     hideNav: true,
@@ -205,7 +207,31 @@ const data = [
     component: Day15,
 
     isFA: true,
-    icon: 'columns',
+    icon: 'calendar',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  // {
+  //   key: 16,
+  //   title: 'find my location',
+  //   name: 'Day16',
+  //   component: Day16,
+
+  //   isFA: true,
+  //   icon: 'columns',
+  //   size: 60,
+  //   color: '#90bdc1',
+  //   hideNav: true,
+  // },
+  {
+    key: 17,
+    title: 'find my location',
+    name: 'Day17',
+    component: Day17,
+
+    isFA: true,
+    icon: 'search',
     size: 60,
     color: '#90bdc1',
     hideNav: true,
