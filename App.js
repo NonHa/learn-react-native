@@ -41,6 +41,7 @@ import Day14 from './src/day14';
 import Day15 from './src/day15';
 // import Day16 from './src/day16';
 import Day17 from './src/day17';
+import Day18 from './src/day18';
 import Util from './src/utils';
 
 const Stack = createNativeStackNavigator();
@@ -232,6 +233,18 @@ const data = [
 
     isFA: true,
     icon: 'search',
+    size: 60,
+    color: '#90bdc1',
+    hideNav: true,
+  },
+  {
+    key: 18,
+    title: 'find my location',
+    name: 'Day18',
+    component: Day18,
+
+    isFA: false,
+    icon: 'md-move',
     size: 60,
     color: '#90bdc1',
     hideNav: true,
